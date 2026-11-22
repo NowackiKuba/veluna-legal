@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności Veluna</title>
+<style>
+:root { color-scheme: light dark; --bg: #faf8f5; --text: #1f1b18; --muted: #6b625b; --rule: #e4ddd5; --link: #8a4b2e; }
+@media (prefers-color-scheme: dark) { :root { --bg: #161413; --text: #f1ece6; --muted: #a89d93; --rule: #34302c; --link: #e2a07e; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 0.25rem; }
+h2 { font-size: 1.2rem; margin: 2.25rem 0 0.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+p, li { margin: 0.5rem 0; }
+ul { padding-left: 1.25rem; }
+a { color: var(--link); }
+.meta { color: var(--muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Polityka prywatności Veluna</h1>
+<p class="meta">Ostatnia aktualizacja: 22 listopada 2026 · <a href="../en/">English</a></p>
+
+<p>Veluna to aplikacja mobilna, która na podstawie selfie i krótkiego quizu określa Twój typ kolorystyczny. Ta polityka wyjaśnia, jakie dane osobowe przetwarzają aplikacja i jej serwer, w jakim celu, jak długo i jakie masz prawa.</p>
+
+<h2>1. Administrator</h2>
+<p>Administratorem Twoich danych osobowych jest {{CONTROLLER_NAME}}. W sprawach dotyczących Twoich danych i aby skorzystać ze swoich praw, napisz na adres <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+<h2>2. Twoje selfie</h2>
+<ul>
+<li>Aplikacja rozpoznaje Twoją twarz, oczy, brwi i usta na telefonie (Google ML Kit, działający na urządzeniu).</li>
+<li>Aby wykonać analizę, aplikacja wysyła zdjęcie i te kontury twarzy na nasz serwer. Serwer przetwarza zdjęcie wyłącznie w pamięci. Nie zapisuje go i nie umieszcza go w logach.</li>
+<li>Serwer przekazuje zdjęcie dostawcy AI, OpenAI lub Anthropic (korzystamy z jednego z nich naraz), który opisuje Twoją kolorystykę. Razem ze zdjęciem przekazuje zmierzone na nim wartości kolorów (skóry, oczu i włosów, wraz z tonem i kontrastem), Twoje odpowiedzi z quizu i język aplikacji. Zgodnie z własną polityką dostawca może przechowywać dane przesłane przez API do 30 dni, na przykład w celu wykrywania nadużyć, a następnie je usuwa.</li>
+<li>Zdjęcie z Twojego ostatniego wyniku jest zapisywane na telefonie, w plikach aplikacji, aby wynik mógł je pokazać po ponownym uruchomieniu. Zostaje tam do rozpoczęcia nowej analizy, usunięcia konta lub usunięcia aplikacji. Nigdy nie jest wysyłane w celu przechowywania. Ponieważ znajduje się w plikach aplikacji, trafia do kopii zapasowej iCloud lub urządzenia.</li>
+</ul>
+
+<h2>3. Dane przechowywane na naszym serwerze</h2>
+<ul>
+<li><strong>Konto:</strong> losowy identyfikator konta oraz daty jego utworzenia i aktualizacji. Z aplikacji można korzystać bez logowania; wtedy tworzymy dla Ciebie konto anonimowe.</li>
+<li><strong>Logowanie, jeśli logujesz się przez Apple lub Google:</strong> nazwa dostawcy, identyfikator Twojego konta u tego dostawcy, adres e-mail (w przypadku Apple może to być prywatny adres przekierowujący) i informacja, czy dostawca go zweryfikował.</li>
+<li><strong>Sesje:</strong> sesje logowania i tokeny odświeżania. Tokeny odświeżania przechowujemy wyłącznie jako skróty (hash).</li>
+<li><strong>Wyniki analiz:</strong> Twój typ kolorystyczny i jego opis, odpowiedzi z quizu (w tym wybrany kolor włosów i oczu), kolor skóry i oczu zmierzony na selfie w postaci wartości kolorów, kolor włosów potwierdzony lub wybrany przez Ciebie oraz język aplikacji.</li>
+<li><strong>Subskrypcja:</strong> kupiony produkt, data wygaśnięcia i informacja, czy jest aktywna, przekazywane nam przez RevenueCat.</li>
+<li><strong>Historia skanera:</strong> 50 najnowszych skanów ubrań, każdy jako wartość koloru, procent dopasowania i werdykt. Zdjęcie ze skanera nigdy nie opuszcza telefonu; zapisujemy tylko kolor.</li>
+</ul>
+
+<h2>4. Dane szczególnej kategorii</h2>
+<p>Kolor skóry zmierzony na zdjęciu twarzy może ujawniać informacje o pochodzeniu rasowym lub etnicznym. Zgodnie z RODO (art. 9) jest to szczególna kategoria danych osobowych. Przetwarzamy go wyłącznie w celu wykonania analizy kolorystycznej i wyłącznie na podstawie Twojej wyraźnej zgody, której udzielasz, robiąc selfie i rozpoczynając analizę. Możesz w każdej chwili wycofać zgodę, usuwając konto (zob. punkt 8); nie wpływa to na zgodność z prawem przetwarzania sprzed wycofania.</p>
+
+<h2>5. Dane przechowywane tylko na telefonie</h2>
+<ul>
+<li>Zdjęcie z ostatniego wyniku (zob. punkt 2).</li>
+<li>Odpowiedzi z quizu do czasu udanej analizy, w pęku kluczy iOS (Keychain), tylko na tym urządzeniu i bez kopii zapasowej.</li>
+<li>Tokeny logowania, również w pęku kluczy.</li>
+</ul>
+<p>Na iOS elementy pęku kluczy mogą pozostać po usunięciu aplikacji, więc ponowna instalacja na tym samym telefonie może je przywrócić.</p>
+
+<h2>6. Czego nie zbieramy</h2>
+<ul>
+<li>Aplikacja nie zawiera narzędzi analitycznych, reklamowych ani do raportowania awarii.</li>
+<li>Nie śledzimy Cię w innych aplikacjach ani na stronach internetowych i nie sprzedajemy Twoich danych.</li>
+<li>Twój adres IP jest używany tylko przez krótki czas, w pamięci serwera, do ograniczania liczby zapytań. Nie jest zapisywany. Logi błędów serwera mogą zawierać szczegóły techniczne, w tym identyfikator Twojego konta, jeśli błąd go dotyczy, ale nigdy nie zawierają zdjęć ani treści analiz.</li>
+</ul>
+
+<h2>7. Kto przetwarza dane w naszym imieniu</h2>
+<ul>
+<li><strong>OpenAI lub Anthropic</strong> (USA): analiza selfie. Otrzymuje zdjęcie, zmierzone na nim kolory i Twoje odpowiedzi z quizu (zob. punkt 2).</li>
+<li><strong>RevenueCat</strong> (USA): obsługa subskrypcji. Otrzymuje identyfikator Twojego konta Veluna i dane zakupu z App Store.</li>
+<li><strong>Apple i Google:</strong> logowanie, jeśli z niego korzystasz. Płatności obsługuje Apple; nie widzimy Twoich danych płatniczych.</li>
+<li><strong>Railway</strong>: hosting naszego serwera i bazy danych.</li>
+</ul>
+<p>Niektóre z tych firm mają siedzibę poza Europejskim Obszarem Gospodarczym. Przekazanie danych do nich opiera się na zabezpieczeniach stosowanych przez tych dostawców, takich jak standardowe klauzule umowne UE lub ramy ochrony danych UE-USA (Data Privacy Framework).</p>
+
+<h2>8. Jak długo przechowujemy dane</h2>
+<p>Dane z punktu 3 przechowujemy do czasu usunięcia konta. W aplikacji wybierz Ustawienia → Usuń konto: wszystkie dane Twojego konta na naszym serwerze zostaną od razu usunięte. Usunięcie konta nie anuluje subskrypcji w App Store; anuluj ją w ustawieniach konta Apple. Nieużywane konta anonimowe nie są obecnie usuwane automatycznie; aby je usunąć, usuń konto w aplikacji przed jej odinstalowaniem.</p>
+
+<h2>9. Podstawy prawne</h2>
+<ul>
+<li>Działanie aplikacji oraz Twoje konto, analizy, skany i subskrypcja: wykonanie umowy z Tobą (art. 6 ust. 1 lit. b RODO).</li>
+<li>Kolor skóry z selfie: Twoja wyraźna zgoda (art. 9 ust. 2 lit. a RODO).</li>
+<li>Ograniczanie liczby zapytań według adresu IP w celu ochrony usługi: nasz prawnie uzasadniony interes w zapewnieniu bezpieczeństwa (art. 6 ust. 1 lit. f RODO).</li>
+</ul>
+
+<h2>10. Twoje prawa</h2>
+<p>Masz prawo dostępu do swoich danych, ich sprostowania lub usunięcia, otrzymania ich w przenośnym formacie, wniesienia sprzeciwu wobec przetwarzania opartego na naszym prawnie uzasadnionym interesie oraz wycofania zgody w dowolnym momencie. Napisz na adres <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. Możesz też złożyć skargę do organu nadzorczego; w Polsce jest to Prezes Urzędu Ochrony Danych Osobowych (PUODO), ul. Stawki 2, 00-193 Warszawa.</p>
+
+<h2>11. Dzieci</h2>
+<p>Veluna nie jest skierowana do dzieci poniżej 16. roku życia. Jeśli uważasz, że dziecko przekazało nam dane osobowe, skontaktuj się z nami, a je usuniemy.</p>
+
+<h2>12. Zmiany</h2>
+<p>Jeśli zmienimy tę politykę, opublikujemy nową wersję na tej stronie i zaktualizujemy datę na górze.</p>
+</main>
+</body>
+</html>

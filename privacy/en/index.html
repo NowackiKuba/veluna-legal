@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veluna privacy policy</title>
+<style>
+:root { color-scheme: light dark; --bg: #faf8f5; --text: #1f1b18; --muted: #6b625b; --rule: #e4ddd5; --link: #8a4b2e; }
+@media (prefers-color-scheme: dark) { :root { --bg: #161413; --text: #f1ece6; --muted: #a89d93; --rule: #34302c; --link: #e2a07e; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 42rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 0.25rem; }
+h2 { font-size: 1.2rem; margin: 2.25rem 0 0.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+p, li { margin: 0.5rem 0; }
+ul { padding-left: 1.25rem; }
+a { color: var(--link); }
+.meta { color: var(--muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Veluna privacy policy</h1>
+<p class="meta">Last updated: 22 November 2026 · <a href="../pl/">Polski</a></p>
+
+<p>Veluna is a mobile app that finds your colour season from a selfie and a short quiz. This policy explains what personal data the app and its server process, why, for how long, and what rights you have.</p>
+
+<h2>1. Who is responsible</h2>
+<p>The controller of your personal data is {{CONTROLLER_NAME}}. For any question about your data or to use your rights, write to <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+<h2>2. Your selfie</h2>
+<ul>
+<li>The app finds your face, eyes, eyebrows and mouth on your phone (Google ML Kit, running on the device).</li>
+<li>To analyse it, the app sends the photo and those face outlines to our server. The server processes the photo in memory only. It does not save the photo and does not write it to its logs.</li>
+<li>The server sends the photo to an AI provider, OpenAI or Anthropic (we use one of them at a time), which describes your colouring. Together with the photo it sends the colour values measured from it (skin, eyes and hair, with undertone and contrast), your quiz answers and the app language. Under its own policy the provider may keep API inputs for up to 30 days, for example for abuse monitoring, and then deletes them.</li>
+<li>The photo of your latest result is saved on your phone, in the app's own files, so the result can show it after you reopen the app. It stays there until you start a new analysis, delete your account or delete the app. It is never uploaded for storage. Because it sits in the app's files, it is included in your iCloud or device backups.</li>
+</ul>
+
+<h2>3. Data we store on our server</h2>
+<ul>
+<li><strong>Account:</strong> a random account id and the dates it was created and updated. You can use the app without signing in; an anonymous account is created for you.</li>
+<li><strong>Sign-in, if you sign in with Apple or Google:</strong> the provider name, your account id at that provider, your email address (with Apple this may be a private relay address) and whether the provider verified it.</li>
+<li><strong>Sessions:</strong> login sessions and refresh tokens. Refresh tokens are stored only as hashes.</li>
+<li><strong>Analysis results:</strong> your season and its description, your quiz answers (including the hair and eye colour you chose), the skin and eye colour measured from your selfie as colour values, the hair colour you confirmed or picked, and the app language.</li>
+<li><strong>Subscription:</strong> the product you bought, when it expires and whether it is active, as reported to us by RevenueCat.</li>
+<li><strong>Scanner history:</strong> your newest 50 clothing scans, each as a colour value, a match percentage and a verdict. The scanner photo never leaves your phone; only the colour is saved.</li>
+</ul>
+
+<h2>4. Sensitive data</h2>
+<p>Your skin colour, measured from a photo of your face, can reveal information about your racial or ethnic origin. Under the GDPR (Article 9) this is a special category of personal data. We process it only to give you your colour analysis, and only on the basis of your explicit consent, which you give by taking a selfie and starting the analysis. You can withdraw your consent at any time by deleting your account (see section 8); this does not affect processing that happened before.</p>
+
+<h2>5. Data kept only on your phone</h2>
+<ul>
+<li>The photo of your latest result (see section 2).</li>
+<li>Your quiz answers until an analysis succeeds, in the iOS Keychain, on this device only and not in backups.</li>
+<li>Your sign-in tokens, also in the Keychain.</li>
+</ul>
+<p>On iOS, Keychain items can remain after you delete the app, so reinstalling on the same phone may restore them.</p>
+
+<h2>6. What we do not collect</h2>
+<ul>
+<li>No analytics, advertising or crash-reporting tools are built into the app.</li>
+<li>We do not track you across other apps or websites and do not sell your data.</li>
+<li>Your IP address is used only for a short time, in the server's memory, to limit the number of requests. It is not stored. Server error logs may contain technical details, including your account id when an error concerns your account, but never a photo or analysis content.</li>
+</ul>
+
+<h2>7. Who processes data for us</h2>
+<ul>
+<li><strong>OpenAI or Anthropic</strong> (USA): analyses your selfie. It receives the photo, the colours measured from it and your quiz answers (see section 2).</li>
+<li><strong>RevenueCat</strong> (USA): manages subscriptions. It receives your Veluna account id and your purchase data from the App Store.</li>
+<li><strong>Apple and Google:</strong> sign in, if you use it. Apple processes payments; we never see your payment details.</li>
+<li><strong>Railway</strong>: hosts our server and database.</li>
+</ul>
+<p>Some of these companies are based outside the European Economic Area. Where data is transferred there, the transfer relies on the safeguards those providers offer, such as the EU Standard Contractual Clauses or the EU-US Data Privacy Framework.</p>
+
+<h2>8. How long we keep data</h2>
+<p>We keep the data in section 3 until you delete your account. In the app, go to Settings → Delete account: everything stored on our server for your account is deleted at once. Deleting your account does not cancel an App Store subscription; cancel it in your Apple account settings. Anonymous accounts that are no longer used are not deleted automatically today; to remove one, delete the account in the app before uninstalling it.</p>
+
+<h2>9. Legal bases</h2>
+<ul>
+<li>Providing the app and your account, analyses, scans and subscription: performance of our contract with you (GDPR Art. 6(1)(b)).</li>
+<li>Skin colour from your selfie: your explicit consent (Art. 9(2)(a)).</li>
+<li>Limiting requests by IP address to protect the service: our legitimate interest in security (Art. 6(1)(f)).</li>
+</ul>
+
+<h2>10. Your rights</h2>
+<p>You have the right to access your data, to have it corrected or deleted, to receive it in a portable format, to object to processing based on our legitimate interest, and to withdraw your consent at any time. Write to <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. You can also lodge a complaint with a data protection authority; in Poland this is the President of the Personal Data Protection Office (PUODO), ul. Stawki 2, 00-193 Warszawa.</p>
+
+<h2>11. Children</h2>
+<p>Veluna is not directed at children under 16. If you believe a child has given us personal data, contact us and we will delete it.</p>
+
+<h2>12. Changes</h2>
+<p>If we change this policy, we will publish the new version on this page and update the date at the top.</p>
+</main>
+</body>
+</html>
